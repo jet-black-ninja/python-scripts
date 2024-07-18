@@ -21,6 +21,8 @@ def dirSort(baseDir):
             if not len(ext):
                 continue
             
+            
+            
             for k,v in paths.items():
                 if  ext in v:
                     if not (path.exists(f"{baseDir}/{k}")):
@@ -33,8 +35,7 @@ def dirSort(baseDir):
                     os.mkdir(f"{baseDir}/Files")
                 shutil.move(file,f"{baseDir}/Files")
         except Exception as e:
-            print(f"{file} failed with error {e}\n")
-            continue
+            print("")
 
 
 if __name__ == "__main__": 

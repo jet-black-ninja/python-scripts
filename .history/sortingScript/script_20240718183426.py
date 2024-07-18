@@ -15,11 +15,13 @@ paths={
 
 def dirSort(baseDir):
     filename = glob.glob(f"{baseDir}/*")
-    for file in filename:
-        try:
+        for file in filename:
+            
             ext = os.path.splitext(file)[1]
             if not len(ext):
                 continue
+            
+            
             
             for k,v in paths.items():
                 if  ext in v:
@@ -32,10 +34,7 @@ def dirSort(baseDir):
                 if not (path.exists(f"{baseDir}/Files")):
                     os.mkdir(f"{baseDir}/Files")
                 shutil.move(file,f"{baseDir}/Files")
-        except Exception as e:
-            print(f"{file} failed with error {e}\n")
-            continue
-
+    
 
 if __name__ == "__main__": 
     dirSort(sys.argv[1])

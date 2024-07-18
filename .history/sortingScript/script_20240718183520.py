@@ -21,6 +21,8 @@ def dirSort(baseDir):
             if not len(ext):
                 continue
             
+            
+            
             for k,v in paths.items():
                 if  ext in v:
                     if not (path.exists(f"{baseDir}/{k}")):

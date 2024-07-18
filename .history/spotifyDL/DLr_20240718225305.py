@@ -14,11 +14,15 @@ def spotify():
     else: 
         #playlist 
         if(url.find('playlist') > -1):
-            name = input("Enter Playlist Name")
-            os.system(f'spotdl --output "{name}/{{track-number}} - {{title}}.{{output-ext}}" {url}')
+            print("playlist")
             # os.system(f"spotdl -p {url} --write-to playlist.txt")
             # os.system(f"spotdl --list playlist.txt")
         #artist
+        if(url.find("artist")> -1):
+            name = input("Enter Playlist Name")
+            os.system(f'spotdl --output "{name}" {url}')
+            # os.system(f"spotdl -all {url} --write-to artist.txt")
+            # os.system(f"spotdl --list artist.txt")
         if(url.find("album")> -1):
             print("album")
             os.system(f'spotdl --output "{{artist}}/{{album}}/{{track-number}} - {{title}}.{{output-ext}}" "{url}"')

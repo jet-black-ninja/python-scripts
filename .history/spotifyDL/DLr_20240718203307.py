@@ -24,9 +24,8 @@ def spotify():
             # os.system(f"spotdl --list artist.txt")
         if(url.find("album")> -1):
             print("album")
-            os.system(f'spotdl --output "{{artist}}/{{album}}/{{track-number}} - {{title}}.{{output-ext}}" "{url}"')
+            os.mkdir(f"")
+            os.system(f"spotdl --output \"  )
             
 if __name__== "__main__":
     spotify()
-    
-    

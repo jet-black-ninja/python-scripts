@@ -28,5 +28,3 @@ def spotify():
             
 if __name__== "__main__":
     spotify()
-    
-    

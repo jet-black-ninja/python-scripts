@@ -1,0 +1,12 @@
+import os
+import glob
+import shutil
+from os import path
+
+filename = glob.glob("C:/Users/Sachin/Downloads/*")
+
+documents = ['.pdf', '.docs', '.doc','.txt']
+media = ['.jpeg','.png','.jpg','.svg','.PNG']
+setupFiles = ['.exe','.msi']
+zip = ['.zip',',7z']
+

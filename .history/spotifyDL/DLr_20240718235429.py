@@ -13,7 +13,6 @@ def spotify():
     print(url)
     if(url.find('track')> -1):
         os.system(f'spotdl download {url}')
-        
     else: 
         #playlist 
         if(url.find('playlist') > -1):
@@ -22,7 +21,6 @@ def spotify():
         if(url.find("album")> -1):
             print("album")
             os.system(f'spotdl --output "{{artist}}/{{album}}/{{track-number}} - {{title}}.{{output-ext}}" "{url}"')
-    
     
 frame = customtkinter.CTkFrame(master=root)
 frame.pack(pady=100, padx = 60, fill = "both" , expand = True)

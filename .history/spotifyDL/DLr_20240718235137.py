@@ -9,11 +9,10 @@ root = customtkinter.CTk()
 root.geometry("700x400")
 
 def spotify():
-    url = entry1.get()
-    print(url)
+    url = entry1
+    
     if(url.find('track')> -1):
-        os.system(f'spotdl download {url}')
-        
+        os.system(f'spotdl save download {url}')
     else: 
         #playlist 
         if(url.find('playlist') > -1):
@@ -23,12 +22,11 @@ def spotify():
             print("album")
             os.system(f'spotdl --output "{{artist}}/{{album}}/{{track-number}} - {{title}}.{{output-ext}}" "{url}"')
     
-    
 frame = customtkinter.CTkFrame(master=root)
 frame.pack(pady=100, padx = 60, fill = "both" , expand = True)
 
 label = customtkinter.CTkLabel(master=frame, text ="Enter Link To DownLoad")
-label.pack(pady=12, padx=10)
+label.pack(pady=120, padx=100)
 
 entry1 = customtkinter.CTkEntry(master= frame, placeholder_text="Spotify Link")
 entry1.pack(pady=12,padx=10)

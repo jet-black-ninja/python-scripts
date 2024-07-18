@@ -13,7 +13,6 @@ def spotify():
     print(url)
     if(url.find('track')> -1):
         os.system(f'spotdl download {url}')
-        
     else: 
         #playlist 
         if(url.find('playlist') > -1):
